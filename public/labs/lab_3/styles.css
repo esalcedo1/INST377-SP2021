@@ -1,59 +1,66 @@
-/* Add some css styles based on the tutorial at javascript.info: introduction to browser events
- https://javascript.info/introduction-browser-events */
-
-
-body{
-    background-color: #69fffc;
-    padding: 20px;
-}
-
-.gallery li{
-    float: left;
-}
-
-
-/* Carousel Styling */
+body {
+    padding: 10px;
+    background-color: #828cfa;
+  }
 .carousel {
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 50%;
-    margin-top: -100px;
-    margin-left: -100px;
+    margin-top: -65px;
+    margin-left: -199px;
+    width: 398px;
+    padding: 10px 40px;
+    border: 1px solid #CCC;
+    border-radius: 15px;
+    background: #eee;
 }
-
-.carousel img{
-    display: block; /*makes 1400px an accurate*/
+.carousel img {
+    width: 130px;
+    height: 130px;
+    /* make it block to remove space around images */
+    display: block;
 }
-
-/*Gallery Styling*/
-
+.arrow {
+    position: absolute;
+    top: 60px;
+    padding: 0;
+    background: #ddd;
+    border-radius: 15px;
+    border: 1px solid gray;
+    font-size: 24px;
+    line-height: 24px;
+    color: #444;
+    display: block;
+}
+.arrow:focus {
+    outline: none;
+}
+.arrow:hover {
+    background: #ccc;
+    cursor: pointer;
+}
+.prev {
+    left: 7px;
+}
+.next {
+    right: 7px;
+}
 .gallery {
-    width: 200px;
-    overflow: hidden; /*hides the list elements that are outside of the box */
+    width: 390px;
+    overflow: hidden;
 }
-
-.gallery ul{
-    height:200px;
-    width: 1400px; 
-    margin: 0px;
+.gallery ul {
+    height: 130px;
+    width: 9999px;
+    margin: 0;
     padding: 0;
     list-style: none;
     transition: margin-left 250ms;
+    /* remove white-space between inline-block'ed li */
+    /* http://davidwalsh.name/remove-whitespace-inline-block */
+    font-size: 0;
 }
-.gallery img{
-    width: 200px;
-}
-
-/*Arrow Styling*/
-
-.previous {
-    position: absolute;
-    right: 250px;
-    top: 100px;
+.gallery li {
+    display: inline-block;
 }
 
-.next {
-    position: absolute;
-    left: 250px;
-    top: 100px;
-}
