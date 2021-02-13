@@ -9,52 +9,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css"/>
+    <script src='script.js'></script>
     <title>Lab 3 - Browser Events</title>
 </head>
+
 <body>
     <div class='carousel'>
-        <button class="arrow previous"><span>&#8617;</span></button>
-        <ul>
-            <li><img src='images/onigiri_1.png' alt='onigiri 1 png'></li>
-            <li><img src='images/onigiri_2.png' alt='onigiri 2 png'></li>
-            <li><img src='images/onigiri_3.png' alt='onigiri 3 png'></li>
-            <li><img src='images/onigiri_4.png' alt='onigiri 4 png'></li>
-            <li><img src='images/roll_1.png' alt='roll 1 png'></li>
-            <li><img src='images/roll_2.png' alt='roll 2 png'></li>
-            <li><img src='images/roll_3.png' alt='roll 3 png'></li>
-        </ul>
-        <button class="arrow previous"><span>&#8618;</span></button>
+        <button class="arrow previous" type='button' onclick="shiftRight()"><span>&#8617;</span></button>
+        <div class="gallery">
+            <ul id="artwork">
+                <li><img src='images/onigiri_1.png' alt='onigiri 1 png'></li>
+                <li><img src='images/onigiri_2.png' alt='onigiri 2 png'></li>
+                <li><img src='images/onigiri_3.png' alt='onigiri 3 png'></li>
+                <li><img src='images/onigiri_4.png' alt='onigiri 4 png'></li>
+                <li><img src='images/roll_1.png' alt='roll 1 png'></li>
+                <li><img src='images/roll_2.png' alt='roll 2 png'></li>
+                <li><img src='images/roll_3.png' alt='roll 3 png'></li>
+            </ul>
+        </div>
+        <button class="arrow next" type='button' onclick="shiftLeft()"><span>&#8618;</span></button>
     </div>
 </body>
 </html>
-
-<!-- Common Events
-    Examples of mouse events
-click - mouse clicks on an element or when a touch screen tap occurs
-contextmenu - right clicks on an element
-mouseover/mouseout - mouse cursor comes over / leaves an element
-mousedown/mouseup - mousebutton is pressed / released over an element
-mousemove - when the mouse is moved 
-
-    Keyboard events
-keydown/keyup - keyboard key is pressed / released
-
-    Form Element events
-submit - when visitor submits <form>
-focus - when visitor focuses on an element, on an <input>
-
-    Document elements
-DOMContentLoaded - when the HTML is loaded and processed, DOM is fully buil
-
-    CSS Events
-transitionend - when a CSS-animation finishes
--->
-
-<!-- Images tags with src and alt attributes
-<img src='images/onigiri_1.png' alt='onigiri 1 png'>
-<img src='images/onigiri_2.png' alt='onigiri 2 png'>
-<img src='images/onigiri_3.png' alt='onigiri 3 png'>
-<img src='images/onigiri_4.png' alt='onigiri 4 png'>
-<img src='images/roll_1.png' alt='roll 1 png'>
-<img src='images/roll_2.png' alt='roll 2 png'>
-<img src='images/roll_3.png' alt='roll 3 png'> -->

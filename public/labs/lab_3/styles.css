@@ -1,21 +1,59 @@
 /* Add some css styles based on the tutorial at javascript.info: introduction to browser events
  https://javascript.info/introduction-browser-events */
 
+
 body{
-    background-color: #69fffc ;
+    background-color: #69fffc;
+    padding: 20px;
+}
+
+.gallery li{
+    float: left;
 }
 
 
- ul {
-    list-style-type: none;
-}
-
-li {
-    display: inline-block;
-}
-
+/* Carousel Styling */
 .carousel {
-    margin: auto;
-    width: 50%;
-    padding: 15px
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -100px;
+}
+
+.carousel img{
+    display: block; /*makes 1400px an accurate*/
+}
+
+/*Gallery Styling*/
+
+.gallery {
+    width: 200px;
+    overflow: hidden; /*hides the list elements that are outside of the box */
+}
+
+.gallery ul{
+    height:200px;
+    width: 1400px; 
+    margin: 0px;
+    padding: 0;
+    list-style: none;
+    transition: margin-left 250ms;
+}
+.gallery img{
+    width: 200px;
+}
+
+/*Arrow Styling*/
+
+.previous {
+    position: absolute;
+    right: 250px;
+    top: 100px;
+}
+
+.next {
+    position: absolute;
+    left: 250px;
+    top: 100px;
 }
