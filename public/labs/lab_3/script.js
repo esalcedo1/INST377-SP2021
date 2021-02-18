@@ -1,18 +1,6 @@
-/* label the images, just for convenience, to visually track them */
-const images = document.querySelectorAll('.imageClass');
-const imageArray = Array.from(images);
-
+/*let variable declarations */
 let i = 1;
 
-function assign(item) {
-    item.style.position = 'relative';
-    item.insertAdjacentHTML('beforeend', `<span style="position:absolute;left:0;top:0">${i}</span>`)
-    i++;
-}
-
-imageArray.forEach(assign);
-
-/* configuration */
 let width = 130; // image width
 let count = 3; // visible images count
 
@@ -20,6 +8,15 @@ let list = carousel.querySelector('ul');
 let listElems = carousel.querySelectorAll('li');
 
 let position = 0; // ribbon scroll position
+
+
+listElems.forEach(assign);
+
+function assign(item) {
+    item.style.position = 'relative';
+    item.insertAdjacentHTML('beforeend', `<span style="position:absolute;left:0;top:0">${i}</span>`);
+    i++;
+}
 
 carousel.querySelector('.prev').onclick = function() {
   // shift left
