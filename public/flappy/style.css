@@ -1,8 +1,41 @@
+body {
+    display : flex;
+}
+
 .game-container {
     width: 500px;
     height: 730px;
     position: absolute;
+    left: 80px;
 }
+
+.border-left {
+    width: 100px;
+    height: 790px;
+    position: absolute;
+    background-color: white;
+    z-index: +2;
+}
+
+.border-right {
+    width: 80px;
+    height: 790px;
+    position: absolute;
+    background-color: white;
+    z-index: +2;
+    left: 580px;
+}
+
+.border-top {
+    width:  800px;
+    height: 60px;
+    position: absolute;
+    background-color: white;
+    z-index: +2;
+    top:-50px;
+    left: -70px;
+}
+
 
 .sky {
     background-image: url('fb-game-background.png');
@@ -17,6 +50,7 @@
     height: 150px;
     position: absolute;
     top: 580px;
+    z-index: +1;
 }
 
 .bird{

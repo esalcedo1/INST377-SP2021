@@ -63,22 +63,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (
             obstacleLeft > 200 && obstacleLeft < 280 && birdLeft === 220
-             && birdBottom < obstacleBottom + 153 
-             || birdBottom === 0
+            && (birdBottom < obstacleBottom + 153 || birdBottom > obstacleBottom + gap - 190)
+            || birdBottom === 0
             ) {
             gameOver();
             clearInterval(timerId);
         }
       }
-        let timerId = setInterval(moveObstacle, 20);
-        if (!isGameOver) setTimeout(generateObstacle, 3000)
+      let timerId = setInterval(moveObstacle, 20);
+      if (!isGameOver) setTimeout(generateObstacle, 3000);
 
     }
     generateObstacle();
 
     function gameOver() {
         clearInterval(gameTimerId);
+        console.log('game over');
         isGameOver = true;
-        document.removeEventListener('keyup', control)
+        document.removeEventListener('keyup', control);
     }
 });
