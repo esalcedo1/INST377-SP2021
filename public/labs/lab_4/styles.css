@@ -1,6 +1,49 @@
-.flex-outer li,
-.flex-inner {
-    display: flex;
-    flex-wrap: wrap;
+body {
+    background: #8083c9; 
     align-items: center;
 }
+
+h1 {
+    text-align: center;
+    padding-bottom: 20px;
+}
+.flex-outer li,
+.flex-inner {
+    display:flex;
+    padding-right: 100px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin:10px 0;
+}
+
+.flex-inner {
+    flex-wrap: nowrap;
+    padding-left: 300px;
+    justify-content: space-between;
+}
+
+.flex-outer > li > label,
+.flex-inner li p {
+    flex: 1 0 120px;
+    max-width: 200px;
+}
+
+.flex-outer > li > label + *,
+.flex-inner {
+    flex: 1 0 200px;
+}
+
+.flex-outer li button {
+    margin-right: auto;
+    padding: 8px 16px;
+    border: none;
+    background: #f2f2f2;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: .09em;
+    border-radius: 2px;
+
+}
+
+
+
