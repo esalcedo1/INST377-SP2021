@@ -9,51 +9,50 @@
 <body>
     <h1>Ethan Salcedo's Lab 4</h1>
     <div class="container">
-    <form action="/api" method="POST">
+    <form action="/api" method="post">
         <ul class="flex-outer">
         <li>
-            <label for="first-name">First Name</label>
-            <input type="text" id="first-name" placeholder="Enter your first name here">
+            <label for="fname">First Name</label>
+            <input name='fname' type="text" id="fname" placeholder="Enter your first name here">
         </li>
         <li>
-            <label for="last-name">Last Name</label>
-            <input type="text" id="last-name" placeholder="Enter your last name here">
+            <label for="lname">Last Name</label>
+            <input name='lname' type="text" id="lname" placeholder="Enter your last name here">
         </li>
         <li>
             <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Anything but an AOL email.">
+            <input name='email' type="email" id="email" placeholder="Anything but an AOL email.">
         </li>
         <li>
-            <label for="phone">Phone</label>
-            <input type="tel" id="phone" placeholder="Enter your phone here">
+            <label for="tel">Phone</label>
+            <input name='tel' type="tel" id="tel" placeholder="Enter your phone here">
         </li>
         <li>
             <label for="message">Text Field</label>
-            <textarea rows="6" id="message" placeholder="This default text is better than anything you'd put in here."></textarea>
+            <textarea name='message' rows="5" cols='33' id="message" placeholder="This default text is better than anything you'd put in here."></textarea>
         </li>
         <li>
             <p>Age</p>
             <ul class="flex-inner">
             <li>
-                <input type="checkbox" id="eighteen-to-thirtyfive">
+                <input name="eighteen-to-thirtyfive"type="checkbox" id="eighteen-to-thirtyfive">
                 <label for="eighteen-to-thirtyfive">18-35</label>
             </li>
             <li>
-                <input type="checkbox" id="thirtyfive-to-fifty">
+                <input name="thirtyfive-to-fifty" type="checkbox" id="thirtyfive-to-fifty">
                 <label for="thirtyfive-to-fifty">35-50</label>
             </li>
             <li>
-                <input type="checkbox" id="fifty-to-sixtyfive">
+                <input name="fifty-to-sixtyfive" type="checkbox" id="fifty-to-sixtyfive">
                 <label for="fifty-to-sixtyfive">50-65</label>
             </li>
             </ul>
         </li>
         <li>
-            <button type="submit">Submit Form</button>
+            <button name='subButton' id='subButton' type="submit">Submit Form</button>
         </li>
         </ul>
     </form>
     </div>
 </body>
 </html>
-
