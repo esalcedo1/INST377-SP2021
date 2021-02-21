@@ -7,6 +7,7 @@ import dotenv from 'dotenv';
 import fetch from 'node-fetch';
 import reload from 'livereload';
 import connectReload from 'connect-livereload';
+// import { findIndex } from 'cypress/types/lodash';
 
 dotenv.config();
 
@@ -43,6 +44,7 @@ app.route('/api')
     console.log('POST request detected');
     console.log('Form data in res.body', req.body);
     console.log('Now send something back to your client');
+    res.json({message: 'hello world'});
     // res.json({data: dataToSendToFrontEnd});
   });
 
