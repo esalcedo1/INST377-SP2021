@@ -3,5 +3,5 @@
     "viewportHeight": 800,
     "viewportWidth": 1280,
     "pluginsFile": "cypress/plugins/index.cjs",
-    "chromeWebSecurity" : false
+    "chromeWebSecurity": false
 }
